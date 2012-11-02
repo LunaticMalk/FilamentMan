@@ -6,6 +6,8 @@ package gamestates
 	import org.flixel.FlxSprite;
 	import org.flixel.FlxState;
 	import org.flixel.FlxText;
+	
+	import managers.LevelManager;
 	/**
 	 * ...
 	 * @author Scano
@@ -41,6 +43,7 @@ package gamestates
 		private function OnStartClick():void
 		{
 			FlxG.state = new PlayState();
+			LevelManager.GetInstance().NextLevel();
 		}
 		
 		private var mStartButton:FlxButton;

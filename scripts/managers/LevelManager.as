@@ -4,6 +4,7 @@ package managers
 	import constants.GameplayConstants;
 	import customEvents.LevelEvent;
 	import flash.events.Event;
+	import gamestates.LevelCompleteState;
 	import gamestates.PlayState;
 	import org.flixel.FlxG;
 	import org.flixel.FlxState;
@@ -132,8 +133,6 @@ package managers
 			//listen for level end events
 			GameEventManager.GetInstance().SubscribeToEvent(this, LevelEvent.LEVEL_END_EVENT);
 			this.addEventListener(LevelEvent.LEVEL_END_EVENT, OnLevelEnd);
-			
-			NextLevel();
 		}
 		
 		private function OnLevelLoaded(event:Event):void
@@ -174,7 +173,8 @@ package managers
 		private function OnLevelEnd(event:LevelEvent):void
 		{
 			EndLevel();
-			NextLevel();
+			
+			FlxG.state = new LevelCompleteState();
 		}
 		
 		

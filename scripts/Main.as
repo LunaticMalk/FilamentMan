@@ -1,8 +1,7 @@
 package  
 {
 	import constants.ConfigConstants;
-	import gamestates.MainMenuState;
-	import gamestates.PlayState;
+	import gamestates.InitializeState;
 	import org.flixel.data.FlxMouse;
 	import org.flixel.FlxG;
 	import org.flixel.FlxGame;
@@ -18,7 +17,7 @@ package
 	{		
 		public function Main() 
 		{
-			super(ConfigConstants.SCREEN_WIDTH, ConfigConstants.SCREEN_HEIGHT, MainMenuState , 1);
+			super(ConfigConstants.SCREEN_WIDTH, ConfigConstants.SCREEN_HEIGHT, InitializeState , 1);
 		}		
 	}
 

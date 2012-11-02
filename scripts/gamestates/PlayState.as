@@ -31,12 +31,6 @@ package gamestates
 			mPlayer.exists = false;
 			
 			FlxState.bgColor = 0xAAAAAA;
-
-			//create the managers
-			GameEventManager.Create();
-			LevelManager.Create();
-			RulesManager.Create();
-			HudManager.Create();
 			
 		}
 
